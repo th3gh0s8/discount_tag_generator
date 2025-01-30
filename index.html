@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginated Discount Tags</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Discount Tag Printer</h1>
+        <form id="discountForm">
+            <table id="itemsTable">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Original Price</th>
+                    <th>Discount Percentage</th>
+                    <th>PLU</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="itemName" required></td>
+                    <td><input type="number" name="originalPrice" step="0.01" required></td>
+                    <td><input type="number" name="discountPercentage" required></td>
+                    <td><input type="number" name="plu" required></td>
+                </tr>
+            </table>
+            <button type="button" onclick="addItem()">Add Item</button>
+            <button type="submit">Generate Tags</button>
+        </form>
+        <div id="tagOutput" class="tag-output"></div>
+        <div id="paginationControls" class="pagination-controls"></div>
+        <button id="printButton" onclick="printTags()">Print Tags</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

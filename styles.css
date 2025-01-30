@@ -1,0 +1,90 @@
+body {
+    font-family:  sans-serif, Arial,;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.tag-output {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px dashed #007bff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tag {
+    font-size: 50px;
+    font-weight: bold;
+    border: 1px dashed #ffffff;
+    border-radius: 4px;
+    color: #000000;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.discount {
+   font-weight: bold;
+   font-size: 100px;
+}
+
+.before-price {
+    font-weight: bold;
+    color: #000000;
+    font-size: 100px;
+}
+
+.now-price {
+    font-weight: bold;
+    color: #000000;
+    font-size: 100px;
+}
+@media print {
+    .pagebreak { page-break-before: always; } /* page-break-after works, as well */
+}
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+}
