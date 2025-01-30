@@ -1,5 +1,5 @@
 body {
-    font-family:  sans-serif, Arial,;
+    font-family: sans-serif, Arial;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +13,9 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -29,6 +32,8 @@ input, button {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -64,8 +69,8 @@ button:hover {
 }
 
 .discount {
-   font-weight: bold;
-   font-size: 100px;
+    font-weight: bold;
+    font-size: 100px;
 }
 
 .before-price {
@@ -79,9 +84,24 @@ button:hover {
     color: #000000;
     font-size: 100px;
 }
-@media print {
-    .pagebreak { page-break-before: always; } /* page-break-after works, as well */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .item-name, .discount, .before-price, .now-price {
+        font-size: 80px;
+    }
 }
+
+@media (max-width: 480px) {
+    .item-name, .discount, .before-price, .now-price {
+        font-size: 60px;
+    }
+}
+
+@media print {
+    .pagebreak { page-break-before: always; }
+}
+
 @media print {
     .pagebreak {
         clear: both;
